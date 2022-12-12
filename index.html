@@ -2,21 +2,88 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Full Page Emoji</title>
+  <title>bitgroups.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
   <style>
-    body:before {
-      content: "😘";
-      font-size: 200px;
-      line-height: 1;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
+
+    body, html {
+        margin: 0;
+        padding: 0;
     }
+
+    div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 400px;
+        line-height: 1;
+    }
+
+    #comingSoon {
+      position: absolute  ;
+      top: 0;
+        left: 0;
+      font-family: 'Monoton', cursive;
+      font-size: 36px;
+      font-weight: bold;
+      color: #000;
+      text-align: center;
+      animation: color-shift 2s infinite;
+      font-style: italic;
+      display: inline-block;
+        vertical-align: middle;
+
+    }
+    @keyframes color-shift {
+      0% {
+        color: #f44336;
+      }
+      25% {
+        color: #2196f3;
+      }
+      50% {
+        color: #4caf50;
+      }
+      75% {
+        color: #ffeb3b;
+      }
+      100% {
+        color: #f44336;
+      }
+    }
+    h1 {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
   </style>
+  <script type="text/javascript">
+    function please_load() {
+      var div = document.getElementById('myDiv');
+      var coming = document.getElementById('comingSoon');
+      div.style.marginTop = (window.innerHeight - div.offsetHeight) / 2 + 'px';
+      div.style.marginBottom = (window.innerHeight - div.offsetHeight) / 2 + 'px';
+      div.style.marginLeft = (window.innerWidth - div.offsetWidth) / 2 + 'px';
+      div.style.marginRight = (window.innerWidth - div.offsetWidth) / 2 + 'px';
+      coming.style.top = `${document.getElementById('emoji').offsetHeight + 100 }px`;
+      coming.style.marginLeft = (window.innerWidth - coming.offsetWidth) / 2 + 'px';
+      coming.style.marginRight = (window.innerWidth - dcomingiv.offsetWidth) / 2 + 'px';
+    }
+  </script>
 </head>
-<body>
+<body onload="please_load()" onresize="please_load()">
+  <div id="myDiv" style="display: block;">
+    <span id="emoji">😘</span>
+    
+</div>
+<h1 id="comingSoon"><span>WAIT &nbsp; FOR &nbsp; IT</span></h1>
 </body>
 </html>
+
+
+
