@@ -73,15 +73,17 @@
       coming.style.top = `${document.getElementById('emoji').offsetHeight + 100 }px`;
       coming.style.marginLeft = (window.innerWidth - coming.offsetWidth) / 2 + 'px';
       coming.style.marginRight = (window.innerWidth - dcomingiv.offsetWidth) / 2 + 'px';
+      div.style.display="block";
+      coming.style.display="block";
     }
   </script>
 </head>
 <body onload="please_load()" onresize="please_load()">
-  <div id="myDiv" style="display: block;">
+  <div id="myDiv" style="display: none;">
     <span id="emoji">😘</span>
     
 </div>
-<h1 id="comingSoon"><span>WAIT &nbsp; FOR &nbsp; IT</span></h1>
+<h1 id="comingSoon" style="display: none;"><span>WAIT &nbsp; FOR &nbsp; IT</span></h1>
 </body>
 </html>
 
